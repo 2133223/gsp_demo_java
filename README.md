@@ -14,4 +14,4 @@ Java demos for the General SQL Parser library
 - SQL modify and rebuild, SQL refactor.
   - [add/modify/remove a new join](src/test/java/scriptWriter/testModifySql.java)
   - [add/modify/remove filter condition](src/test/java/scriptWriter/testModifySql.java)
-  - [add/modify/remove columns in select lis](src/test/java/scriptWriter/testModifySql.java)
+  - [add/modify/remove columns in select lis](src/test/java/scriptWriter/testModifySql.java)set path1 success!
