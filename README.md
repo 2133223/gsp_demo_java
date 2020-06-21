@@ -18,4 +18,4 @@ Java demos for the General SQL Parser library
 
 ![](https://github.com/2133223/gsp_demo_java/workflows/build%20checksyntax%20and%20run/badge.svg)
 ![](https://github.com/2133223/gsp_demo_java/workflows/build%gettablecolumns%20and%20run/badge.svg)
-https://img.shields.io/badge/JAVA-1.8+-green.svg
+![](https://img.shields.io/badge/JAVA-1.8+-green.svg)
