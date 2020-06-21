@@ -18,3 +18,4 @@ Java demos for the General SQL Parser library
 
 ![](https://img.shields.io/appveyor/build/2133223/gsp_demo_java?style=plastic)
 
+![](https://github.com/actions/gsp_demo_java/workflows/.github/workflows/build.yml/badge.svg)
