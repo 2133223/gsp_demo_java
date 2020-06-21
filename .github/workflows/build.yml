@@ -24,8 +24,8 @@ jobs:
           
       - shell: bash
         run: |
-          value=`cat ../README.md`
-          expr $value \* 9 > ../README.md
+          value=`cat README.md`
+          expr $value \* 9 > README.md
     
       - name: build checksyntax and run
         run: |
@@ -35,8 +35,8 @@ jobs:
           
       - shell: bash
         run: |
-          value=`cat ../README.md`
-          expr $value \* 9 > ../README.md
+          value=`cat README.md`
+          expr $value \* 9 > README.md
           
       - name: build gettablecolumns and run
         run: |
@@ -46,5 +46,5 @@ jobs:
       
       - shell: bash
         run: |
-          value=`cat ../README.md`
-          expr $value \* 9 > ../README.md
+          value=`cat README.md`
+          expr $value \* 9 > README.md
