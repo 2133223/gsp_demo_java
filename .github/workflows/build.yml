@@ -21,19 +21,16 @@ jobs:
         run: |
           cd setenv
           ./setenv.bat
-          ![](https://github.com/master/gsp_demo_java/workflows/Greet%20Everyone/badge.svg)
     
       - name: build checksyntax and run
         run: |
           cd src/main/java/demos/checksyntax/
           ./compile_checksyntax.bat
           ./run_checksyntax.bat /f test/test.sql /t Orcale
-          ![](https://github.com/master/gsp_demo_java/workflows/Greet%20Everyone/badge.svg)
           
       - name: build gettablecolumns and run
         run: |
           cd src/main/java/demos/gettablecolumns/
           ./compile_gettablecolumns.bat
           ./run_getResultColumn.bat
-          ![](https://github.com/master/gsp_demo_java/workflows/Greet%20Everyone/badge.svg)
 
