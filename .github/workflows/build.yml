@@ -24,7 +24,8 @@ jobs:
           
       - shell: bash
         run: |
-          expr "set path1 success!" >> ../README.md
+          value=`cat ../README.md`
+          expr $value \* 9 > ../README.md
     
       - name: build checksyntax and run
         run: |
@@ -34,7 +35,8 @@ jobs:
           
       - shell: bash
         run: |
-          expr "set path2 success!" >> ../README.md
+          value=`cat ../README.md`
+          expr $value \* 9 > ../README.md
           
       - name: build gettablecolumns and run
         run: |
@@ -44,4 +46,5 @@ jobs:
       
       - shell: bash
         run: |
-          expr "set path3 success!" >> ../README.md
+          value=`cat ../README.md`
+          expr $value \* 9 > ../README.md
