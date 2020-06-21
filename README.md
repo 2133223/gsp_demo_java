@@ -15,5 +15,6 @@ Java demos for the General SQL Parser library
   - [add/modify/remove a new join](src/test/java/scriptWriter/testModifySql.java)
   - [add/modify/remove filter condition](src/test/java/scriptWriter/testModifySql.java)
   - [add/modify/remove columns in select lis](src/test/java/scriptWriter/testModifySql.java)
-  
-![](https://github.com/master/gsp_demo_java/workflows/.github/workflows/build.yml/badge.svg?branch=release)
+
+![](https://github.com/actions/hello-world/workflows/build%20checksyntax%20and%20run/badge.svg)
+![](https://github.com/actions/hello-world/workflows/build%gettablecolumns%20and%20run/badge.svg)
