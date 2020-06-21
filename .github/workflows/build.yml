@@ -8,7 +8,7 @@ jobs:
   build:
     name: my test
     runs-on: windows-latest
-    steps:
+    steps:       
       - name: release
         uses: actions/checkout@master
         
@@ -21,25 +21,27 @@ jobs:
         run: |
           cd setenv
           ./setenv.bat
-          echo "set path1 success!" >> ../README.md
-          git config --global user.email 1435679023@qq.com
-          git config --global user.name marsggbo
-          git add .
-          git commit -m "path1-success" -a
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - shell: bash
+        run: |
+          expr "set path1 success!" >> ../README.md
     
       - name: build checksyntax and run
         run: |
           cd src/main/java/demos/checksyntax/
           ./compile_checksyntax.bat
-          ./run_checksyntax.bat /f test/test.sql /t mysql
+          ./run_checksyntax.bat /f test/test.sql /t Orcale
+          
+      - shell: bash
+        run: |
+          expr "set path2 success!" >> ../README.md
           
       - name: build gettablecolumns and run
         run: |
           cd src/main/java/demos/gettablecolumns/
           ./compile_gettablecolumns.bat
           ./run_getResultColumn.bat
+      
+      - shell: bash
+        run: |
+          expr "set path3 success!" >> ../README.md
