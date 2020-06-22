@@ -26,7 +26,7 @@ jobs:
         run: |
           cd src/main/java/demos/checksyntax/
           ./compile_checksyntax.bat
-          ./run_checksyntax.bat /f test/test.sql /t Orcale
+          ./run_checksyntax.bat /f test/test.sql /t mysql
           
       - name: build gettablecolumns and run
         run: |
