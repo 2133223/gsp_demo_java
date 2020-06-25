@@ -29,5 +29,5 @@ red
 
 
 ```diff
-- Not implemented yet
+Not implemented yet
 ```
