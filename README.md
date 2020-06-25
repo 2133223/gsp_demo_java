@@ -26,3 +26,15 @@ Note: <font color='red'>Not implemented yet</font>
 ```Not implemented yet
 red
 ```
+
+
+```diff
+
+
++ this will be highlighted in green
+
+
+- this will be highlighted in red
+
+
+```
