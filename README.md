@@ -19,3 +19,4 @@ Java demos for the General SQL Parser library
 
 ![](https://github.com/2133223/gsp_demo_java/workflows/cicd-test/badge.svg)
 
+Note: <font color='red'>Not implemented yet</font>
