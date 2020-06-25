@@ -20,4 +20,9 @@ Java demos for the General SQL Parser library
 ![](https://github.com/2133223/gsp_demo_java/workflows/cicd-test/badge.svg)
 
 Note: <font color='red'>Not implemented yet</font>
-(https://placehold.it/15/f03c15/000000?text=+) `Not implemented yet` 
+-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Not implemented yet` 
+
+
+```Not implemented yet
+red
+```
