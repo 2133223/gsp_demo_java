@@ -1,49 +1,9 @@
-
-
-
 import gudusoft.gsqlparser.EDbVendor;
-import gudusoft.gsqlparser.EExpressionType;
-import gudusoft.gsqlparser.EJoinType;
-import gudusoft.gsqlparser.TCustomSqlStatement;
-import gudusoft.gsqlparser.TGSqlParser;
-import gudusoft.gsqlparser.nodes.IExpressionVisitor;
-import gudusoft.gsqlparser.nodes.TExpression;
-import gudusoft.gsqlparser.nodes.TJoin;
-import gudusoft.gsqlparser.nodes.TJoinItem;
-import gudusoft.gsqlparser.nodes.TJoinList;
-import gudusoft.gsqlparser.nodes.TParseTreeNode;
-import gudusoft.gsqlparser.nodes.TTable;
-import gudusoft.gsqlparser.nodes.TTableList;
-import gudusoft.gsqlparser.stmt.TSelectSqlStatement;
 import junit.framework.TestCase;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class JoinConverterTest extends TestCase {
 
-    public static void main(String[] args) {
-        testOracleSql1();
-//        testOracleSql2();
-        testOracleSql3();
-        testOracleSql4();
-        testOracleSql5();
-        testSqlServerSql1();
-        testSqlServerSql2();
-        testSqlServerSql3();
-        testSqlServerSql4();
-        testSqlServerSql5();
-    }
 
     public static void testOracleSql1() {
         EDbVendor vendor = EDbVendor.dbvoracle;
@@ -206,11 +166,9 @@ public class JoinConverterTest extends TestCase {
                 "   a.id=?\n" +
                 " )\n";
         JoinConverter joinConverter = new JoinConverter(sql, vendor);
-        if(joinConverter.convert() != 0){
-            System.exit(1);
-        }
-//        assertTrue(joinConverter.convert() == 0);
+        assertTrue(joinConverter.convert() == 0);
     }
+
     public static void testSqlServerSql5() {
         EDbVendor vendor = EDbVendor.dbvmssql;
         String sql = "INSERT INTO T select  \n" +

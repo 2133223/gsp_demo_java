@@ -26,7 +26,8 @@ call setenv\setenv.bat
     )
 
 REM # Run the gsp demo
-%JAVA_CMD% -cp %CLASSPATH% JoinConverterTest  %1
+%JAVA_JAR% -cvf  lib/joinConvert.jar build/*.class
+%JAVA_CMD% -cp %CLASSPATH% org.junit.runner.JUnitCore JoinConverterTest
 
 REM # Change back to the original directory
 cd src\test\java\joinconvert
