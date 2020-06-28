@@ -10,6 +10,7 @@ import gudusoft.gsqlparser.TGSqlParser;
 
 import gudusoft.gsqlparser.pp.para.GFmtOptFactory;
 import gudusoft.gsqlparser.pp.para.GFmtOpt;
+import gudusoft.gsqlparser.pp.para.styleenums.TAlignStyle;
 import gudusoft.gsqlparser.pp.para.styleenums.TCaseOption;
 import gudusoft.gsqlparser.pp.stmtformatter.FormatterFactory;
 
@@ -31,7 +32,7 @@ public class formatsql {
              return;
          }
 
-        TGSqlParser sqlparser = new TGSqlParser(EDbVendor.dbvmssql);
+        TGSqlParser sqlparser = new TGSqlParser(EDbVendor.dbvmysql);
          sqlparser.sqlfilename = args[0];
 
 //        sqlparser.sqltext = "insert into emp(empno,empnm,deptnm,sal) select empno, empnm, dptnm, sal from emp where empno=:empno;\n" +
@@ -52,7 +53,10 @@ public class formatsql {
         int ret = sqlparser.parse();
         if (ret == 0){
             GFmtOpt option = GFmtOptFactory.newInstance();
-            option.wsPaddingParenthesesInExpression = false;
+//            System.out.println(option.createtableFieldlistAlignOption);
+            option.useTab=true;
+            option.tabSize = 2;
+//            option.wsPaddingParenthesesInExpression = false;
             //option.selectColumnlistComma =     TLinefeedsCommaOption.LfBeforeComma;
             // umcomment next line generate formatted sql in html
             //option.outputFmt =  GOutputFmt.ofhtml;

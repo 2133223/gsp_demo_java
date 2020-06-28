@@ -700,6 +700,10 @@ public class analyzeScript {
                     printConstraint(column.getConstraints().getConstraint(j),false);
                 }
             }
+            if (column.getComment() != null){
+                System.out.println("\tcomment:"+column.getComment().getCommentString() .toString());
+            }
+
             System.out.println("");
         }
 

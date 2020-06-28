@@ -20,7 +20,7 @@ from the select statement.
  
 #### tutorial
 `tutorial.java` is a simple demo illustrates how to get union/minus/except/intersect operator and join condition
-from the select statement.
+from the select statement.java 
 
 ## Usage
 -  `java analyzeScript sqlfile.sql`

@@ -32,7 +32,7 @@ call setenv\setenv.bat
 	)
 
 REM # Compile the gsp demo
-%JAVAC_CMD% -d %targetdir% -classpath %CLASSPATH% src\main\java\demos\joinConvert\*.java
+%JAVAC_CMD% -d %targetdir% -classpath %CLASSPATH% src\test\java\joinConvert\*.java
 
 echo Completed.
 

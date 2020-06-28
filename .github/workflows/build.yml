@@ -2,7 +2,7 @@ name: cicd-test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ release ]
 
 jobs:
   build:
@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
     steps:       
       - name: release
-        uses: actions/checkout@master1
+        uses: actions/checkout@master
         
       - name: Setup Java JDK
         uses: actions/setup-java@v1.3.0
@@ -22,15 +22,9 @@ jobs:
           cd setenv
           ./setenv.bat
     
-      - name: build checksyntax and run
+      - name: run joinconvert testcase
         run: |
-          cd src/main/java/demos/checksyntax/
-          ./compile_checksyntax.bat
-          ./run_checksyntax.bat /f test/test.sql /t mysql
-          
-      - name: build gettablecolumns and run
-        run: |
-          cd src/main/java/demos/gettablecolumns/
-          ./compile_gettablecolumns.bat
-          ./run_getResultColumn.bat
+          cd src/test/java/joinconvert/
+          ./compile_joinconvert.bat
+          ./run_joinconvert.bat
 
