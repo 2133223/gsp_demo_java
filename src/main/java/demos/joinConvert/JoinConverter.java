@@ -838,15 +838,22 @@ public class JoinConverter
 		}
 	}
 
-	private boolean hasJoin( TJoinList joins )
-	{
-		if ( joins == null )
+	private boolean hasJoin(TJoinList joins) {
+		if (joins == null)
 			return false;
-		for ( int i = 0; i < joins.size( ); i++ )
-		{
-			if ( joins.getJoin( i ).getJoinItems( ) != null
-					&& joins.getJoin( i ).getJoinItems( ).size( ) > 0 )
+		for (int i = 0; i < joins.size(); i++) {
+			TJoinItemList joinItems = joins.getJoin(i).getJoinItems();
+			//TODO 修改cross join不能识别的bug
+//            if (joinItems != null && joinItems.size() > 0)
+//                return true;
+			if (null != joinItems && joinItems.size() > 0) {
+				for (int j = 0; j < joinItems.size(); j++) {
+					if (null == joinItems.getJoinItem(j).toString()) {
+						return false;
+					}
+				}
 				return true;
+			}
 		}
 		return false;
 	}

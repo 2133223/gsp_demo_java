@@ -206,10 +206,7 @@ public class JoinConverterTest extends TestCase {
                 "   a.id=?\n" +
                 " )\n";
         JoinConverter joinConverter = new JoinConverter(sql, vendor);
-        if(joinConverter.convert() != 0){
-            System.exit(1);
-        }
-//        assertTrue(joinConverter.convert() == 0);
+        assertTrue(joinConverter.convert() == 0);
     }
     public static void testSqlServerSql5() {
         EDbVendor vendor = EDbVendor.dbvmssql;

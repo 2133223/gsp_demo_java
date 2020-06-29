@@ -27,4 +27,5 @@ jobs:
           cd src/test/java/joinconvert/
           ./compile_joinconvert.bat
           ./run_joinconvert.bat
-
+        if: ${{ failure() }}
+          echo "::stop-commands::my test"
